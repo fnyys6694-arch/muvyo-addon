@@ -5,7 +5,7 @@
   "version": "1.1.4",
   "author": "fnyys",
   "description": "搜索你填写的 Telegram 公开频道，以及你勾选的频道和群组；频道一有新资源，就交给订阅。",
-  "min_mv_version": "",
+  "min_mv_version": "3.13.0",
   "permissions": {
     "domains": [
       "t.me",

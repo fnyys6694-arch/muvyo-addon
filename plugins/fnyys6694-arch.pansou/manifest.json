@@ -5,7 +5,7 @@
   "version": "1.1.1",
   "author": "fnyys",
   "description": "连接你自己部署的盘搜（PanSou）服务，搜索 115、百度网盘、天翼云盘的分享和磁力资源。",
-  "min_mv_version": "",
+  "min_mv_version": "3.13.0",
   "permissions": {
     "domains": [],
     "service": {

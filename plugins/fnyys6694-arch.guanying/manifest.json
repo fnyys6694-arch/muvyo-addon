@@ -5,7 +5,7 @@
   "version": "1.1.2",
   "author": "fnyys",
   "description": "用你的观影站账号搜索 115、光鸭、123 网盘分享和磁力资源。",
-  "min_mv_version": "",
+  "min_mv_version": "3.13.0",
   "permissions": {
     "domains": [],
     "service": {

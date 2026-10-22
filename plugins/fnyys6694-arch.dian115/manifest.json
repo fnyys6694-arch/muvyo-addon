@@ -5,7 +5,7 @@
   "version": "1.1.2",
   "author": "fnyys",
   "description": "用你的癫影 OpenAPI Key 按作品搜索 115 分享、磁力与电驴资源，需要积分的资源点「获取链接」后解锁；支持每日签到与转盘。",
-  "min_mv_version": "",
+  "min_mv_version": "3.13.0",
   "permissions": {
     "domains": [
       "madow.tv"

@@ -22,9 +22,9 @@
   "version": "1.1.2",
   "files": {
    "README.md": "1f885377cdcde4382ec5e39b0f6145ac69fd0854eb6f0a3979d4ed15a984d0e6",
-   "encrypted.json": "6fba07d89ddfe60181cadc5b6954ed37dc6982481b4bdc45f7ab9b676d9e65f1",
-   "manifest.json": "fbecfde719b02d7c4df16e6f6cf1d966380a5100e5c55b199a652253bf13adf0"
+   "encrypted.json": "3d03c12bf68f70bbf2ee4eafe84b21b63c815c27b0ed0b3268310dcc6625c636",
+   "manifest.json": "e0ecf3cf058fc87dfe91e9f8d16a274193980f188c953e774fa88351ecd78bdf"
   }
  },
- "signature": "hP8bxwTBLysWNSAadJCCLmA1lBOUTno4FPDqbZx2HQ4AN4rtLpHtnkCQD2jYNqP3HNNF89806lwGAnAXPoqPCw=="
+ "signature": "O97zl3srvVshSm5jLiiGByAlAwKrgPixJHopM2viMYUieLE8VONie0oM36ScvEnCqaY/hHCGYjDN+MTFTWL4BA=="
 }

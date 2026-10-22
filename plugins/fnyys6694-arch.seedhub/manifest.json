@@ -5,7 +5,7 @@
   "version": "1.1.1",
   "author": "fnyys",
   "description": "经你部署的 FlareSolverr 打开 SeedHub，搜索磁力资源（交给支持离线下载的网盘或 BT 下载器）。",
-  "min_mv_version": "",
+  "min_mv_version": "3.13.0",
   "permissions": {
     "domains": [
       "seedhub.cc",
