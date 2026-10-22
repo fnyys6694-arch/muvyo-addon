@@ -1,0 +1,53 @@
+{
+  "api": 1,
+  "id": "fnyys6694-arch.pansou",
+  "name": "盘搜",
+  "version": "1.1.1",
+  "author": "fnyys",
+  "description": "连接你自己部署的盘搜（PanSou）服务，搜索 115、百度网盘、天翼云盘的分享和磁力资源。",
+  "min_mv_version": "",
+  "permissions": {
+    "domains": [],
+    "service": {
+      "label": "盘搜服务地址",
+      "help": "你部署的盘搜地址，例如 http://192.168.1.100:8888"
+    }
+  },
+  "config": [
+    {
+      "key": "username",
+      "label": "用户名",
+      "type": "text",
+      "help": "盘搜开启了登录认证时填写，没开就留空"
+    },
+    {
+      "key": "password",
+      "label": "密码",
+      "type": "secret",
+      "help": "与用户名一起填写"
+    }
+  ],
+  "settings": {
+    "description": "填写你部署的盘搜服务地址。盘搜开启了登录认证时再填用户名和密码，登录状态由插件自己保存，过期会自动重新登录。",
+    "sections": [
+      {
+        "title": "登录认证",
+        "fields": [
+          "username",
+          "password"
+        ]
+      }
+    ]
+  },
+  "capabilities": {
+    "search": {
+      "link_types": [
+        "115",
+        "baidupan",
+        "cloud189",
+        "magnet"
+      ],
+      "supports_tmdb": false
+    }
+  }
+}

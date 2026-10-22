@@ -1,0 +1,118 @@
+{
+  "api": 1,
+  "id": "fnyys6694-arch.telegram",
+  "name": "Telegram 频道",
+  "version": "1.1.4",
+  "author": "fnyys",
+  "description": "搜索你填写的 Telegram 公开频道，以及你勾选的频道和群组；频道一有新资源，就交给订阅。",
+  "min_mv_version": "",
+  "permissions": {
+    "domains": [
+      "t.me",
+      "telegram.me",
+      "telegra.ph"
+    ],
+    "muvyo": [
+      "telegram.channel",
+      "subscription.push",
+      "telegram.botsearch"
+    ]
+  },
+  "config": [
+    {
+      "key": "channels",
+      "label": "公开频道",
+      "type": "textarea",
+      "placeholder": "@example_channel",
+      "help": "要搜索和监听的公开频道或公开超级群用户名，每行一个，带不带 @ 都行"
+    },
+    {
+      "key": "reader",
+      "label": "公开频道读取方式",
+      "type": "select",
+      "default": "auto",
+      "options": [
+        {
+          "value": "auto",
+          "label": "自动（按账号额度与网页可用性选择）"
+        },
+        {
+          "value": "account",
+          "label": "用 Telegram 账号"
+        },
+        {
+          "value": "web",
+          "label": "用网页版（不需要登录）"
+        }
+      ],
+      "help": "自动：填了系统代理、网页版经代理读通时先读网页版；没填代理或网页版不通时，登录了 Telegram 账号就用账号读，账号读取次数会给勾选的私有频道留够，用不了时再读网页版（网页版每个频道只能看到最近约 20 条，监听间隔里新消息太多时会漏掉）；用账号：只用账号；用网页版：只读网页版，不需要登录"
+    },
+    {
+      "key": "limit",
+      "label": "每个频道条数",
+      "type": "number",
+      "default": "30",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "条",
+      "help": "搜索时每个频道最多取多少条消息"
+    },
+    {
+      "key": "bots",
+      "label": "搜索机器人",
+      "type": "textarea",
+      "placeholder": "example_bot | query | /s {keyword} | 详情 | 下一页",
+      "help": "每行一个：机器人 | 方式（query 发查询 / inline / history 只读历史回复）| 查询模板 | 要点的详情按钮 | 翻页按钮，后几项可省略。机器人要先在下方「可用的搜索机器人」里添加；每次搜索最多问 2 个"
+    }
+  ],
+  "settings": {
+    "description": "填写公开频道，或在下方勾选已加入的频道和群组。频道实时监听在「定时任务」里打开；是否在订阅允许时段外跳过，由 Muvyo 的「遵守订阅允许时段」开关控制。",
+    "sections": [
+      {
+        "title": "频道",
+        "fields": [
+          "channels",
+          "reader"
+        ]
+      },
+      {
+        "title": "搜索",
+        "fields": [
+          "limit",
+          "bots"
+        ]
+      }
+    ]
+  },
+  "capabilities": {
+    "search": {
+      "link_types": [
+        "115",
+        "123pan",
+        "baidupan",
+        "guangyapan",
+        "aliyundrive",
+        "cloud189",
+        "magnet",
+        "ed2k"
+      ],
+      "supports_tmdb": false,
+      "modes": [
+        "completed"
+      ]
+    },
+    "tasks": [
+      {
+        "id": "live",
+        "title": "频道实时监听",
+        "description": "读取各频道上次之后的新消息，片名命中订阅的交给订阅转存；第一次运行只记下当前位置，不处理旧消息。",
+        "kind": "watch",
+        "interval_minutes": 2
+      }
+    ],
+    "browse": {
+      "label": "频道"
+    }
+  }
+}

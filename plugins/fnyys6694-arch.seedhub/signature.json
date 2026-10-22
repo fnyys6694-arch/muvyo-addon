@@ -1,0 +1,30 @@
+{
+ "version": 1,
+ "certificate": {
+  "certificate": {
+   "aud": "mediavault-addon-author",
+   "version": 1,
+   "serial": 16,
+   "author_id": "gh-346203438",
+   "author": "fnyys6694-arch",
+   "namespace": "fnyys6694-arch",
+   "public_key": "ZNd4HStLSQvq2OpbRq0u9BMgzosTtU5prFQmZNhWch8=",
+   "issued_at": 1792675445,
+   "expires_at": 1824211445,
+   "content_key": "ae9onjdby7V09OdoLddo/KUsqIAPJ8Y0lvMys+Ko9lY=",
+   "content_key_version": 1,
+   "installation_key": "qrREnx/BjV8e46JCEPGHC8yctvkBWnMhDx6MBo1OU8g="
+  },
+  "signature": "Byg5kzbmgAaGxqYw7F7yjYrF8IQezqMMYhPXchv7MZviP+AHQX/IN7M0r2mk52hOnvhdvbOH8BDCBz7r6FzzBA=="
+ },
+ "payload": {
+  "plugin_id": "fnyys6694-arch.seedhub",
+  "version": "1.1.1",
+  "files": {
+   "README.md": "7cdea66230a937d86046add30ddca6c92f8215d4fbf2547ab11bc491be5fa119",
+   "encrypted.json": "45631d5d076d823aeadbd0460f7df001d787371c6a8d78f65c8d48b43b65a676",
+   "manifest.json": "7d557a824e5b2a3db5b74d55da800354e26eea449647cef7a4ebd742cf67b0b1"
+  }
+ },
+ "signature": "YIUN90+U0l2lx/HKi0SD3h02RK7Q2xUEc7NGLxWFYDJZYiuiBEvCUxzDcavYl8KtZsNthoh0137vcxL6+Bf8AA=="
+}

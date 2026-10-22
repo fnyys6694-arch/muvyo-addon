@@ -1,0 +1,169 @@
+{
+  "api": 1,
+  "id": "fnyys6694-arch.hdhive",
+  "name": "影巢",
+  "version": "1.1.1",
+  "author": "fnyys",
+  "description": "用你的影巢授权搜索资源；需要积分的资源点「获取链接」后解锁，支持每日签到。",
+  "min_mv_version": "",
+  "permissions": {
+    "domains": [
+      "re0.me",
+      "www.re0.me",
+      "hdhive.com",
+      "www.hdhive.com",
+      "mv.zwf210.eu.org"
+    ],
+    "tls_pins": [
+      {
+        "host": "mv.zwf210.eu.org",
+        "sha256": "3ef00a407612ead0beeed5beeb017569ef1ce9c5ddd02b20ea96e10d7b82f7df"
+      }
+    ],
+    "muvyo": [
+      "tmdb.search"
+    ]
+  },
+  "config": [
+    {
+      "key": "authorization_code",
+      "label": "授权码",
+      "type": "secret",
+      "help": "新授权时填：点上方「打开影巢授权页」，同意后把浏览器地址栏里 code= 后面的内容粘贴到这里并保存，插件下次运行时自动换成授权"
+    },
+    {
+      "key": "only_official",
+      "label": "只要官组和白名单发布者",
+      "type": "bool",
+      "default": false,
+      "help": "打开后只保留官组资源和下面白名单里发布者的资源（手动搜索、订阅、机器人都按这个过滤）"
+    },
+    {
+      "key": "publisher_whitelist",
+      "label": "发布者白名单",
+      "type": "text",
+      "placeholder": "昵称1,昵称2",
+      "help": "逗号分隔的发布者昵称；填了就只保留官组和这些发布者的资源"
+    },
+    {
+      "key": "checkin_gambler",
+      "label": "赌狗签到",
+      "type": "bool",
+      "default": false,
+      "help": "定时签到时用赌狗模式"
+    },
+    {
+      "key": "checkin_mode",
+      "label": "签到方式",
+      "type": "select",
+      "default": "openapi",
+      "options": [
+        {
+          "value": "openapi",
+          "label": "OpenAPI（捐赠用户）"
+        },
+        {
+          "value": "web",
+          "label": "网页账号（普通账号）"
+        }
+      ],
+      "help": "OpenAPI 签到只对捐赠用户开放；普通账号选网页账号，填下面的账号密码"
+    },
+    {
+      "key": "web_username",
+      "label": "影巢账号",
+      "type": "text",
+      "help": "签到方式选网页账号时填写"
+    },
+    {
+      "key": "web_password",
+      "label": "影巢密码",
+      "type": "secret",
+      "help": "签到方式选网页账号时填写"
+    },
+    {
+      "key": "client_id",
+      "label": "自建应用 Client ID",
+      "type": "text",
+      "help": "留空用插件自带的应用；在影巢注册了自己的 OpenAPI 应用时才填"
+    },
+    {
+      "key": "app_secret",
+      "label": "自建应用 Secret",
+      "type": "secret",
+      "help": "与自建应用 Client ID 一起填写"
+    }
+  ],
+  "settings": {
+    "description": "授权一次即可长期使用，令牌保存在插件数据里并自动刷新。授权失效时插件会提示，重新获取授权码填入即可；也可以在插件设置里点「清除插件数据」后重新授权。",
+    "links": [
+      {
+        "title": "打开影巢授权页",
+        "url": "https://re0.me/openapi/authorize?client_id=app_e8a2f9f28964c7f1461203ea&redirect_uri=http%3A%2F%2F127.0.0.1%2F&state=muvyo&response_mode=redirect&scope=query+unlock+write"
+      }
+    ],
+    "sections": [
+      {
+        "title": "授权",
+        "fields": [
+          "authorization_code"
+        ]
+      },
+      {
+        "title": "过滤",
+        "fields": [
+          "only_official",
+          "publisher_whitelist"
+        ]
+      },
+      {
+        "title": "签到",
+        "fields": [
+          "checkin_gambler",
+          "checkin_mode",
+          "web_username",
+          "web_password"
+        ]
+      },
+      {
+        "title": "自建应用（可选）",
+        "fields": [
+          "client_id",
+          "app_secret"
+        ]
+      }
+    ]
+  },
+  "capabilities": {
+    "account": {},
+    "search": {
+      "link_types": [
+        "115",
+        "123pan",
+        "aliyundrive",
+        "baidupan",
+        "magnet",
+        "ed2k"
+      ],
+      "supports_tmdb": true,
+      "resolve": true,
+      "resolve_cost": "points",
+      "link_hosts": [
+        "re0.me",
+        "www.re0.me",
+        "hdhive.com",
+        "www.hdhive.com"
+      ]
+    },
+    "tasks": [
+      {
+        "id": "checkin",
+        "title": "每日签到",
+        "description": "调用影巢签到接口；签到结果在任务记录里查看",
+        "interval_minutes": 1440,
+        "kind": "checkin",
+        "retries": 2
+      }
+    ]
+  }
+}

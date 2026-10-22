@@ -1,0 +1,134 @@
+{
+  "api": 1,
+  "id": "fnyys6694-arch.dian115",
+  "name": "癫影",
+  "version": "1.1.2",
+  "author": "fnyys",
+  "description": "用你的癫影 OpenAPI Key 按作品搜索 115 分享、磁力与电驴资源，需要积分的资源点「获取链接」后解锁；支持每日签到与转盘。",
+  "min_mv_version": "",
+  "permissions": {
+    "domains": [
+      "madow.tv"
+    ],
+    "muvyo": [
+      "tmdb.search",
+      "telegram.bot"
+    ],
+    "telegram_bots": [
+      "madowchat_bot"
+    ]
+  },
+  "config": [
+    {
+      "key": "api_key",
+      "label": "OpenAPI Key",
+      "type": "secret",
+      "required": true,
+      "help": "在癫影官网个人中心生成的 OpenAPI Key（需要有效 VIP）"
+    },
+    {
+      "key": "checkin_transport",
+      "label": "签到方式",
+      "type": "select",
+      "default": "telegram",
+      "options": [
+        {
+          "value": "telegram",
+          "label": "Telegram 机器人"
+        },
+        {
+          "value": "openapi",
+          "label": "OpenAPI（不抽转盘）"
+        }
+      ],
+      "help": "Telegram 方式要先在 Muvyo 的「Telegram 账号」里登录"
+    },
+    {
+      "key": "checkin_mode",
+      "label": "签到模式",
+      "type": "select",
+      "default": "normal",
+      "options": [
+        {
+          "value": "normal",
+          "label": "普通签到"
+        },
+        {
+          "value": "lucky",
+          "label": "运气签到"
+        }
+      ]
+    },
+    {
+      "key": "wheel_spins",
+      "label": "转盘抽数",
+      "type": "select",
+      "default": "0",
+      "options": [
+        {
+          "value": "0",
+          "label": "不抽"
+        },
+        {
+          "value": "1",
+          "label": "单抽"
+        },
+        {
+          "value": "5",
+          "label": "5 连抽"
+        },
+        {
+          "value": "10",
+          "label": "10 连抽"
+        },
+        {
+          "value": "20",
+          "label": "20 连抽"
+        }
+      ],
+      "help": "只在 Telegram 签到方式下、签到成功后执行；每抽都花积分"
+    }
+  ],
+  "settings": {
+    "description": "填写癫影 OpenAPI Key。只填关键词时插件会先用 Muvyo 的 TMDB 识别作品，再按作品查资源。签到在插件设置的「定时任务」里打开。",
+    "sections": [
+      {
+        "title": "账号",
+        "fields": [
+          "api_key"
+        ]
+      },
+      {
+        "title": "签到",
+        "fields": [
+          "checkin_transport",
+          "checkin_mode",
+          "wheel_spins"
+        ]
+      }
+    ]
+  },
+  "capabilities": {
+    "account": {},
+    "search": {
+      "link_types": [
+        "115",
+        "magnet",
+        "ed2k"
+      ],
+      "supports_tmdb": true,
+      "resolve": true,
+      "resolve_cost": "points"
+    },
+    "tasks": [
+      {
+        "id": "checkin",
+        "title": "每日签到",
+        "description": "按设置的签到方式签到；Telegram 方式可在签到成功后抽转盘",
+        "interval_minutes": 1440,
+        "kind": "checkin",
+        "retries": 0
+      }
+    ]
+  }
+}

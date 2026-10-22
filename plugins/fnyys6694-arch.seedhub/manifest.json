@@ -1,0 +1,88 @@
+{
+  "api": 1,
+  "id": "fnyys6694-arch.seedhub",
+  "name": "SeedHub",
+  "version": "1.1.1",
+  "author": "fnyys",
+  "description": "经你部署的 FlareSolverr 打开 SeedHub，搜索磁力资源（交给支持离线下载的网盘或 BT 下载器）。",
+  "min_mv_version": "",
+  "permissions": {
+    "domains": [
+      "seedhub.cc",
+      "www.seedhub.cc",
+      "sidhub.cc",
+      "www.sidhub.cc"
+    ],
+    "flaresolverr": {
+      "help": "SeedHub 有 Cloudflare 验证，要经 FlareSolverr 打开，例如 http://192.168.1.10:8191"
+    }
+  },
+  "config": [
+    {
+      "key": "site",
+      "label": "站点",
+      "type": "select",
+      "default": "https://www.seedhub.cc",
+      "options": [
+        {
+          "value": "https://www.seedhub.cc",
+          "label": "www.seedhub.cc"
+        },
+        {
+          "value": "https://www.sidhub.cc",
+          "label": "www.sidhub.cc"
+        }
+      ],
+      "help": "主站打不开时换备用站点"
+    },
+    {
+      "key": "max_candidates",
+      "label": "磁力解析条数",
+      "type": "number",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "unit": "条",
+      "default": "3",
+      "help": "每条磁力都要经 FlareSolverr 打开一次中间页，只解析前几条"
+    },
+    {
+      "key": "max_timeout",
+      "label": "单页最长等待",
+      "type": "number",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "秒",
+      "default": "40",
+      "help": "FlareSolverr 过一次验证的最长时间"
+    }
+  ],
+  "settings": {
+    "description": "先在下面填你部署的 FlareSolverr 地址。FlareSolverr 慢，建议把「单次执行时限」调到 180 秒以上；订阅里只在你单独选中它时才用它搜索。",
+    "sections": [
+      {
+        "title": "站点与解析",
+        "fields": [
+          "site",
+          "max_candidates",
+          "max_timeout"
+        ]
+      }
+    ]
+  },
+  "capabilities": {
+    "search": {
+      "link_types": [
+        "magnet"
+      ],
+      "supports_tmdb": false,
+      "link_hosts": [
+        "seedhub.cc",
+        "www.seedhub.cc",
+        "sidhub.cc",
+        "www.sidhub.cc"
+      ]
+    }
+  }
+}
