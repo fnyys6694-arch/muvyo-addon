@@ -1,6 +1,6 @@
 {
  "name": "fnyys 的插件",
- "sequence": 62,
+ "sequence": 63,
  "plugins": [
   {
    "id": "fnyys6694-arch.dian115",
@@ -23,7 +23,7 @@
   {
    "id": "fnyys6694-arch.hdhive",
    "name": "影巢",
-   "version": "1.1.4",
+   "version": "1.1.5",
    "description": "用你的影巢授权搜索资源；需要积分的资源点「获取链接」后解锁，支持每日签到。",
    "author": "fnyys",
    "path": "plugins/fnyys6694-arch.hdhive",

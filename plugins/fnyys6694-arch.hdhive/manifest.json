@@ -2,7 +2,7 @@
   "api": 1,
   "id": "fnyys6694-arch.hdhive",
   "name": "影巢",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "author": "fnyys",
   "description": "用你的影巢授权搜索资源；需要积分的资源点「获取链接」后解锁，支持每日签到。",
   "min_mv_version": "3.13.0",
@@ -12,7 +12,9 @@
       "www.re0.me",
       "hdhive.com",
       "www.hdhive.com",
-      "mv.zwf210.eu.org"
+      "mv.zwf210.eu.org",
+      "t.me",
+      "*.telesco.pe"
     ],
     "tls_pins": [
       {
