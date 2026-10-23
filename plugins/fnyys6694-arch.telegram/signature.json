@@ -19,12 +19,12 @@
  },
  "payload": {
   "plugin_id": "fnyys6694-arch.telegram",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "files": {
-   "README.md": "b119c12ad6b70edc08c6454e7454c9669920cc74a1c01ce60dfd8cfd2625a709",
-   "encrypted.json": "67495d8c5445d4a7c1a1d54e7de4d213a34c694db4e7ad14b9550a5978e6796f",
-   "manifest.json": "52a490f5498e9ca7febe052a2f174de905340c0a417d4597a519d7d1ab33b24d"
+   "README.md": "4c9e1d160ea6bed931c508b72d8caf84a524f2580cbe54abfed7d90d96848f9f",
+   "encrypted.json": "334ae82f1ef1a526be045a0bcb063dfbe7e8795d968174aab97a61c0c99b3a68",
+   "manifest.json": "c949f7722986d76b5f8037d52a24e1e74719f58e9aaab5536396b3b5ef46586b"
   }
  },
- "signature": "Fu1Ifhl4nbmcIo3wyauDvb3DT4vmTFacpvQVA0XdErwHHfbIiqmmAa+OXMNRPnXBoRJdd4H+KuR/RLzWCNvODw=="
+ "signature": "DWVt3kI2OMncNf49JuQWeyEfX89X94NcMSQVnXCdiovpa63E7tIZr6o7vY/iHdkQlGcATZvO/Si0UsPRkpa6BQ=="
 }
