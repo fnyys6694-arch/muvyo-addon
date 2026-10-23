@@ -2,7 +2,7 @@
   "api": 1,
   "id": "fnyys6694-arch.hdhive",
   "name": "影巢",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "fnyys",
   "description": "用你的影巢授权搜索资源；需要积分的资源点「获取链接」后解锁，支持每日签到。",
   "min_mv_version": "3.13.0",
@@ -29,7 +29,7 @@
       "key": "authorization_code",
       "label": "授权码",
       "type": "secret",
-      "help": "新授权时填：点上方「打开影巢授权页」，同意后把浏览器地址栏里 code= 后面的内容粘贴到这里并保存，插件下次运行时自动换成授权"
+      "help": "新授权时填：点上方「打开影巢授权页」，同意后复制浏览器地址栏里 code= 与 &state 之间的那段粘贴到这里并保存（不要带上 &state=muvyo；直接粘贴整个地址也行，插件会自动截取），插件下次运行时自动换成授权"
     },
     {
       "key": "only_official",
