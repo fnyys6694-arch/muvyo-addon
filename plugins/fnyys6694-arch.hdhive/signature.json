@@ -19,12 +19,12 @@
  },
  "payload": {
   "plugin_id": "fnyys6694-arch.hdhive",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "files": {
    "README.md": "e9b1892272b8340d7c0ead9e12c923542f228f08b647cfca4a5b28a81f84aa7d",
-   "encrypted.json": "0d807b01967383604768126af78fe30ca8054e30625d652a4bcedc1bff45eaf6",
-   "manifest.json": "bb076efbeb859dcdbfae5181191d6c060baf5ea32830e87b507ea81cb26f972d"
+   "encrypted.json": "31bb79b645018f742be200f2c9f939c3be1ae6c6713f9930c8cba8eb21abd374",
+   "manifest.json": "a7c3897b0c446b2c4052fa6b7d851a5ad0636eacf79f9e53d4f17e8733c87c6b"
   }
  },
- "signature": "izP1fd8JxfY+yBZJPSgaErRmY2W/swcB3bOmV634BF4zuS8s500Wzr+BlZXfkfWM1RlQTe/VfDHSbGyHmknuBw=="
+ "signature": "B6GBBhOZdeBb7cG45Yavs61ODVR+e5PPRnr7r7ql9MGGK/QIg5GLZAD4Yy1BpIaLMh4e9wk//P9y5bBxQItLBg=="
 }
