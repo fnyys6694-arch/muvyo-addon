@@ -19,12 +19,12 @@
  },
  "payload": {
   "plugin_id": "fnyys6694-arch.dian115",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "files": {
-   "README.md": "731955e351290f7c1f12ded23a30629deac96f03c6216522d7ce45d01d1992ba",
-   "encrypted.json": "352f7f60ca2151f16155cc661bf56c784266986be1357ee935f1ca720f7a4a26",
-   "manifest.json": "03133d09540418972e7c33e9ab760063edc576e45a1597f6324f008bb9367c75"
+   "README.md": "a7d1d5247c5745933671c1db0ceb0dc775e4dccdc0e2929985c13d73557b9eac",
+   "encrypted.json": "3681cb1777a64a481730122c91d577b00e6a66c58a336a8b4bb8c6379bf9d7e0",
+   "manifest.json": "ffe7d0d3a0b929a210393aba6e3e9063fea362f59067b32d0e2e2fc44da853c9"
   }
  },
- "signature": "n+s21ri9cwM324BC0tgn0jxULPiXIUjsHql00y4sEudtbBE6FCogwF1eSU3EIlA2ZiOSAedarpbsTdGvXW5WBQ=="
+ "signature": "QfacfiFz6EGQIG12Zj9kB+SQbWyA6pQCDqlrb8N9dFihBAeol+MXoPQoPKFI7JJmtYBwymrX3sSmNil3LDePAw=="
 }
